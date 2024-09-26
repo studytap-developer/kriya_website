@@ -3,12 +3,18 @@ import visit from '../assets/visit.png';
 
 const Visit = () => {
   return (
-    <div className="relative h-screen bg-fixed bg-cover bg-center" style={{ backgroundImage: `url(${visit})` }}>
-      {/* Overlay to make text more visible */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div className="relative h-screen">
+      {/* Background Wrapper */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-fixed bg-fixed-ios" 
+        style={{ backgroundImage: `url(${visit})` }}
+      >
+        {/* Optional Overlay to enhance text visibility */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      </div>
       
-      {/* Main content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-white text-center px-4">
+      {/* Scrollable Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Visit Our Store</h1>
         <p className="text-lg md:text-2xl mb-8">Come see us for an unforgettable shopping experience</p>
         <a 
