@@ -9,6 +9,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import Visit from './components/Visit';
 import PrivacyPolicy from './components/PrivacyPolicy'; // Import PrivacyPolicy component
+import Chat from './components/chat';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
 
         {/* Always visible components */}
         <Footer />
+        <Chat />
       </div>
     </Router>
   );
