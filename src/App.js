@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Visit from './components/Visit';
 import PrivacyPolicy from './components/PrivacyPolicy'; // Import PrivacyPolicy component
 import Chat from './components/chat';
+import WhatsAppPage from './components/WhatsAppPage';
 
 function App() {
   return (
@@ -29,14 +30,17 @@ function App() {
                 <Categories />
                 <FeaturedProducts />
                 <About />
+
               </>
             }
           />
           <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
-
+        <WhatsAppPage />
         {/* Always visible components */}
         <Footer />
+       
+
         <Chat />
       </div>
     </Router>
