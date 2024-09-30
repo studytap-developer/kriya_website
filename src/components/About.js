@@ -50,8 +50,8 @@ const About = () => {
         {/* Contact Us Button */}
         <div className="mt-16 text-center">
           <a 
-            href="https://wa.me/+919640300099?text=Hello%20Kriya%20Jewellers%2C%20I%27d%20like%20to%20inquire%20about%20your%20products."
-            target="_blank"
+href="https://wa.me/919640300099?text=Hello%20Kriya%20Jewellers%2C%20I%27d%20like%20to%20inquire%20about%20your%20products."
+target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#5d3a29] text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-[#4a2a1e] transition duration-300">
             Contact Us 

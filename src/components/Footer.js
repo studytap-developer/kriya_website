@@ -35,7 +35,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2">
               <li className="text-sm">Address: MIG-209, Rd Number 1, Kukatpally Housing Board Colony, Kukatpally, Hyderabad, Telangana 500072</li>
-              <li className="text-sm">Phone: <a href="tel:+7815006682" className="hover:underline">+91 9640300099</a></li>
+              <li className="text-sm">Phone: <a href="tel:+919640300099" className="hover:underline">+919640300099</a></li>
               <li className="text-sm">Email: <a href="mailto:rkirtirajmandal@gmail.com" className="hover:underline">contact.kriyajewellery@gmail.com</a></li>
             </ul>
           </div>
