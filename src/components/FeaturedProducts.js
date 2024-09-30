@@ -36,8 +36,7 @@ const FeaturedProducts = () => {
               <h3 className="text-lg font-semibold">{product.name}</h3>
               <p className="text-gray-500">{product.price}</p>
               <a
-  href="https://wa.me/9640300099?text=I'm%20interested%20in%20this%20product"
-  className="mt-4 inline-block px-6 py-2 bg-[#5d3a29] text-white font-semibold rounded"
+  href="https://wa.me/+919640300099?text=Hello%20Kriya%20Jewellers%2C%20I%27d%20like%20to%20inquire%20about%20your%20products."  className="mt-4 inline-block px-6 py-2 bg-[#5d3a29] text-white font-semibold rounded"
   target="_blank"
   rel="noopener noreferrer"
 >

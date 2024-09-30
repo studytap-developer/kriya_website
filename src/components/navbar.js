@@ -262,7 +262,7 @@ const Navbar = () => {
               </svg>
             </button>
             <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
-            <li className="">Phone: <a href="tel:+7815006682" className="hover:underline">+91 9640300099</a></li>
+            <li className="">Phone: <a href="tel:+91 9640300099" className="hover:underline">+91 9640300099</a></li>
             <li className="mb-4">Email: contact.kriyajewellery@gmail.com</li>
             <iframe
               className="w-full h-48 rounded-lg"

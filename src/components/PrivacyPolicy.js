@@ -83,7 +83,7 @@ Email: contact.kriyajewellery@gmail.com.
       <p className="mb-4">
         If there are any questions regarding this privacy policy, you may contact us using the information below:
       </p>
-      <p>Phone: +91 9640300099
+      <p>Phone: +919640300099
 Email: contact.kriyajewellery@gmail.com</p>
     </div>
   );
