@@ -1,8 +1,9 @@
 
 
 // import React, { useState, useEffect } from "react";
-// import { Gift, Sparkles, Phone, CheckCircle } from "lucide-react";
-// import logo from "../assets/logoo.png";
+// import { Gift, Sparkles, Phone, CheckCircle, Crown } from "lucide-react";
+//  import logo from "../assets/logoo.png";
+
 
 // const parts = [
 //   { value: "5.55", label: "Plain 22kt Jewellery", color: "from-amber-400 to-yellow-500" },
@@ -85,7 +86,11 @@
 //       >
 //         {!result && (
 //           <>
-//             <img src={logo} alt="Logo" className="h-20 mb-4" />
+//             <div className="flex items-center justify-center mb-4">
+          
+//               <img src={logo} alt="Logo" className="h-24 mb-4" />
+
+//             </div>
 //             <div className="text-center mb-6 max-w-sm">
 //               <div className="bg-black/20 backdrop-blur-sm rounded-xl p-4 border border-yellow-400/30">
 //                 <p className="text-yellow-200 text-sm font-semibold">Aashadam, Shravanam & 1st Anniversary</p>
@@ -125,16 +130,12 @@
 //                         );
 //                       })}
 //                     </div>
+//                     {/* Arrow moved to center */}
 //                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-//                       <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full flex items-center justify-center shadow-xl border-4 border-white">
-//                         <Sparkles className="w-6 h-6 text-white" />
-//                       </div>
+//                       <div className="w-0 h-0 border-l-[12px] border-r-[12px] border-b-[24px] border-l-transparent border-r-transparent border-b-red-600 drop-shadow-lg" />
+//                       <div className="absolute top-5 left-1/2 -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full border-2 border-white shadow-lg" />
 //                     </div>
 //                   </div>
-//                 </div>
-//                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 z-30">
-//                   <div className="w-0 h-0 border-l-[12px] border-r-[12px] border-b-[50px] border-l-transparent border-r-transparent border-b-red-600" />
-//                   <div className="absolute top-10 left-1/2 -translate-x-1/2 w-5 h-5 bg-red-600 rounded-full border-2 border-white" />
 //                 </div>
 //               </div>
 //             </div>
@@ -180,6 +181,19 @@
 //                 <p className="text-base font-semibold text-gray-700 mb-3">
 //                   FLAT VA on {result.label}
 //                 </p>
+// <div className="flex flex-col items-center text-green-900">
+//   <span className="text-5xl font-bold text-amber-700 mb-2">+</span>
+//   <p className="text-sm font-medium text-center max-w-xs mb-6">
+//     You have earned ₹1000/- discount. Please share a screenshot on a minimum purchase of ₹10,000/-
+//   </p>
+// </div>
+
+
+//                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-3 border border-blue-200">
+//                   <p className="text-sm font-medium text-blue-800">
+//                     Offer valid from 01-07-2025 to 20-08-2025
+//                   </p>
+//                 </div>
 //               </div>
 //             </div>
 
@@ -230,6 +244,11 @@
 //                   Kriya Jewellers will contact you soon to help you redeem your{" "}
 //                   <strong>{result.value}%</strong> discount!
 //                 </p>
+//                 <div className="bg-blue-50 rounded-lg p-3 border border-blue-200 mt-3">
+//                   <p className="text-sm font-medium text-blue-800">
+//                     Offer valid from 01-07-2025 to 20-08-2025
+//                   </p>
+//                 </div>
 //               </div>
 //             )}
 //           </div>
@@ -243,15 +262,9 @@
 
 
 
-
-
-
-
-
 import React, { useState, useEffect } from "react";
-import { Gift, Sparkles, Phone, CheckCircle, Crown } from "lucide-react";
- import logo from "../assets/logoo.png";
-
+import { Gift, Sparkles, Phone, CheckCircle, Crown, Trophy, Award, Gem } from "lucide-react";
+import logo from "../assets/logoo.png";
 
 const parts = [
   { value: "5.55", label: "Plain 22kt Jewellery", color: "from-amber-400 to-yellow-500" },
@@ -335,13 +348,7 @@ const FullScreenPopup = ({ onClose }) => {
         {!result && (
           <>
             <div className="flex items-center justify-center mb-4">
-              {/* <Crown className="w-12 h-12 text-yellow-400 mr-2" />
-              <div className="text-center">
-                <h1 className="text-2xl font-bold text-yellow-200">Kriya</h1>
-                <p className="text-sm text-yellow-300">Jewellers</p>
-              </div> */}
               <img src={logo} alt="Logo" className="h-24 mb-4" />
-
             </div>
             <div className="text-center mb-6 max-w-sm">
               <div className="bg-black/20 backdrop-blur-sm rounded-xl p-4 border border-yellow-400/30">
@@ -396,7 +403,7 @@ const FullScreenPopup = ({ onClose }) => {
             <button
               onClick={spin}
               disabled={isSpinning}
-              className={`group relative px-8 py-4 text-lg font-bold rounded-full shadow-2xl transition-all duration-300 transform w-full max-w-xs ${
+              className={`group relative px-8 py-4 text-lg font-bold rounded-full shadow-2xl transition-all duration-300 transform w-full max-w-xs mb-8 ${
                 isSpinning
                   ? "bg-gray-400 cursor-not-allowed scale-95"
                   : "bg-gradient-to-r from-red-500 via-pink-500 to-red-600 hover:from-red-600 hover:via-pink-600 hover:to-red-700 active:scale-95"
@@ -409,6 +416,90 @@ const FullScreenPopup = ({ onClose }) => {
                 <Gift className={`w-5 h-5 ${isSpinning ? "animate-spin" : "group-hover:animate-bounce"}`} />
               </div>
             </button>
+
+            {/* Lucky Draw Prizes Section */}
+            <div className="w-full max-w-md">
+              <div className="text-center mb-4">
+                <div className="bg-gradient-to-r from-yellow-400 to-amber-500 rounded-xl p-3 border-2 border-white/30 shadow-xl">
+                  <h3 className="text-white font-bold text-lg flex items-center justify-center gap-2">
+                    <Sparkles className="w-5 h-5 animate-pulse" />
+                    GET LUCKY DRAW
+                    <Sparkles className="w-5 h-5 animate-pulse" />
+                  </h3>
+                  <p className="text-yellow-100 text-sm font-medium mt-1">
+                    Coupon on every purchase of ₹25,000/-
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                {/* 1st Prize */}
+<div className="bg-gradient-to-r from-[#1e3c72] via-[#2a5298] to-[#1e3c72] rounded-xl p-4 border-2 border-white/20 shadow-xl transform hover:scale-105 transition-all duration-300">
+  <div className="flex items-center justify-between">
+    <div className="flex items-center gap-3">
+      <div className="bg-white/20 rounded-full p-2">
+        <Crown className="w-8 h-8 text-yellow-300 animate-pulse" />
+      </div>
+      <div>
+        <h4 className="text-white font-bold text-lg">1st Prize</h4>
+        <p className="text-yellow-100 text-sm font-medium">Cash Prize</p>
+      </div>
+    </div>
+    <div className="text-right">
+      <div className="text-yellow-300 font-extrabold text-2xl">₹1,00,000</div>
+      <div className="text-yellow-100 text-xs">/-</div>
+    </div>
+  </div>
+</div>
+
+
+
+                {/* 2nd Prize */}
+                <div className="bg-gradient-to-r from-slate-300 via-gray-300 to-slate-400 rounded-xl p-4 border-2 border-white/30 shadow-xl transform hover:scale-105 transition-all duration-300">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="bg-white/20 rounded-full p-2">
+                        <Trophy className="w-8 h-8 text-gray-700 animate-pulse" />
+                      </div>
+                      <div>
+                        <h4 className="text-gray-800 font-bold text-lg">2nd Prize</h4>
+                        <p className="text-gray-600 text-sm font-medium">Pure Silver</p>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-gray-800 font-bold text-xl">1/2 kg</div>
+                      <div className="text-gray-600 text-sm font-medium">SILVER</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 3rd Prize */}
+                <div className="bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 rounded-xl p-4 border-2 border-white/30 shadow-xl transform hover:scale-105 transition-all duration-300">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="bg-white/20 rounded-full p-2">
+                        <Gem className="w-8 h-8 text-white animate-pulse" />
+                      </div>
+                      <div>
+                        <h4 className="text-white font-bold text-lg">3rd Prize</h4>
+                        <p className="text-emerald-100 text-sm font-medium">LGD Jewellery</p>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-white font-bold text-lg">Worth of</div>
+                      <div className="text-white font-bold text-xl">₹25,000/-</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Additional Info */}
+              <div className="mt-4 bg-black/20 backdrop-blur-sm rounded-xl p-3 border border-yellow-400/30">
+                <p className="text-yellow-200 text-xs font-medium text-center">
+                  * Terms & Conditions Apply
+                </p>
+              </div>
+            </div>
           </>
         )}
 
@@ -433,6 +524,13 @@ const FullScreenPopup = ({ onClose }) => {
                 <p className="text-base font-semibold text-gray-700 mb-3">
                   FLAT VA on {result.label}
                 </p>
+                <div className="flex flex-col items-center text-green-900">
+                  <span className="text-5xl font-bold text-amber-700 mb-2">+</span>
+                  <p className="text-sm font-medium text-center max-w-xs mb-6">
+                    You have earned ₹1000/- discount. Please share a screenshot on a minimum purchase of ₹10,000/-
+                  </p>
+                </div>
+
                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-3 border border-blue-200">
                   <p className="text-sm font-medium text-blue-800">
                     Offer valid from 01-07-2025 to 20-08-2025
