@@ -250,6 +250,8 @@
 
 import React, { useState, useEffect } from "react";
 import { Gift, Sparkles, Phone, CheckCircle, Crown } from "lucide-react";
+ import logo from "../assets/logoo.png";
+
 
 const parts = [
   { value: "5.55", label: "Plain 22kt Jewellery", color: "from-amber-400 to-yellow-500" },
@@ -333,11 +335,13 @@ const FullScreenPopup = ({ onClose }) => {
         {!result && (
           <>
             <div className="flex items-center justify-center mb-4">
-              <Crown className="w-12 h-12 text-yellow-400 mr-2" />
+              {/* <Crown className="w-12 h-12 text-yellow-400 mr-2" />
               <div className="text-center">
                 <h1 className="text-2xl font-bold text-yellow-200">Kriya</h1>
                 <p className="text-sm text-yellow-300">Jewellers</p>
-              </div>
+              </div> */}
+              <img src={logo} alt="Logo" className="h-24 mb-4" />
+
             </div>
             <div className="text-center mb-6 max-w-sm">
               <div className="bg-black/20 backdrop-blur-sm rounded-xl p-4 border border-yellow-400/30">
